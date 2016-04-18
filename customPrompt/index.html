@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="./dialog.css">
+<script src="dialog.js"></script>
+<script>
+    function changeText(val) {
+        document.getElementById('status').innerHTML = val;
+    }
+    function changeColor(val) {
+        var color = document.body.style.background = "rgb("+val+")";
+        document.getElementById('color').innerHTML = color;
+    }
+</script>
+</head>
+<body>
+<div id="dialogoverlay"></div>
+<div id="dialogbox">
+  <div>
+    <div id="dialogboxhead"></div>
+    <div id="dialogboxbody"></div>
+    <div id="dialogboxfoot"></div>
+  </div>
+</div>
+<h1 id="status">Default Text</h1>
+<button onclick="Prompt.render('Type some text:', 'changeText')">Change Text</button>
+<button onclick="Prompt.render('Type A Color:', 'changeColor')">Change Color</button>
+<h1 id="color"></h1>
+</body>
+</html>
